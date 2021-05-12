@@ -4,9 +4,7 @@ let numbersContainer=document.createElement('div');
 
 
 numbersContainer.setAttribute('class',"numContainer");
-
 let inputData=document.createElement('input');
-
 inputData.setAttribute('id',"inputBox");
 
 
@@ -169,7 +167,7 @@ function send(i){
         break;      
     }
 }
-main.appendChild(inputData);
+numbersContainer.appendChild(inputData);
 main.appendChild(numbersContainer)
 document.body.appendChild(main);
 

@@ -1,27 +1,9 @@
 let main=document.createElement('div'); 
-
 let numbersContainer=document.createElement('div');
-
 
 numbersContainer.setAttribute('class',"numContainer");
 let inputData=document.createElement('input');
 inputData.setAttribute('id',"inputBox");
-
-
-
-// let nums=10;
-// for(i=1; i<nums; i++){
-//     let calculator=document.createElement('button');
-//     calculator.setAttribute('class',"grid-item");
-//     calculator.setAttribute('onClick',"send(nums[i])")
-//     calculator.innerText=i;
-//     calculator.addEventListener('click',(e)=>{
-//         console.log(e.target);
-//     });
-//     numbersContainer.appendChild(calculator);
-// }
-
-
 ///One...
 let one=document.createElement('button');
 one.setAttribute('class',"grid-item");
@@ -82,14 +64,12 @@ zero.setAttribute('class',"grid-item");
 zero.setAttribute("onClick","send(0)");
 zero.innerText='0';
 numbersContainer.appendChild(zero);
-
 //Dot...
 let dot=document.createElement('button');
 dot.setAttribute('class',"grid-item");
 dot.setAttribute("onClick","send('.')");
 dot.innerText='.';
 numbersContainer.appendChild(dot);
-
 //plus..
 let plus=document.createElement('button');
 plus.setAttribute('class',"grid-item");
@@ -126,7 +106,6 @@ sqrt.setAttribute('class',"grid-item");
 sqrt.setAttribute("onClick","send('√')");
 sqrt.innerText='√';
 numbersContainer.appendChild(sqrt);
-
 // Equals...
 let equal=document.createElement('button');
 equal.setAttribute('class',"grid-item equlas");
@@ -139,7 +118,7 @@ ac.setAttribute('class',"grid-item ac");
 ac.setAttribute("onClick","send('AC')");
 ac.innerText='AC';
 numbersContainer.appendChild(ac);
-
+//Logic Functions....
 function send(i){
     switch(i){
         case 0:inputData.value+=0;break;
@@ -158,7 +137,6 @@ function send(i){
         case "/":inputData.value+="/";break;
         case "%":inputData.value+="%";break;
         case "AC":inputData.value=" ";break;
-        
         case "=":inputData.value= eval(inputData.value);        
         break;  
         case "log":inputData.value= eval(Math.log10(inputData.value));        
@@ -168,14 +146,5 @@ function send(i){
     }
 }
 numbersContainer.appendChild(inputData);
-main.appendChild(numbersContainer)
+main.appendChild(numbersContainer);
 document.body.appendChild(main);
-
-
-// let cal=parseInt(prompt("Enter "))
-
-// let main= document.createElement('div');
-
-
-// document.body.appendChild(main);
-
